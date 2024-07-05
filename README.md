@@ -3,3 +3,5 @@
 - misc improvements
 
 Note: Unzip the vendor/unzipthis.zip for lib
+
+Beef base coded and developed by zKevz, Free, Alexander
