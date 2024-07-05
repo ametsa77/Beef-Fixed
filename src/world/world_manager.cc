@@ -285,8 +285,8 @@ namespace beef
                     player_->send_variant(variantlist {
                         "OnRemove",
                         fmt::format(
-                            "netID|{}",
-                            invoker->get_net_id()
+                            "netID|{}\npId|{}\n",
+                            invoker->get_net_id(), invoker->get_user_id()
                         )
                     });
                 });
