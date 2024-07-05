@@ -267,6 +267,18 @@ namespace beef
                                     uint16_t strlen = *reinterpret_cast<uint16_t*>(&m_data[pos]);
                                     item.setfile = std::string(reinterpret_cast<char*>(m_data + pos + 2), strlen);
                                     pos += 2 + strlen;
+				    if (m_version >= 16) {
+                                        uint16_t strr_len = *reinterpret_cast<uint16_t*>(&m_data[pos]);
+                                        pos += 2 + strr_len;
+
+                                        if (m_version >= 17) {
+                                            pos += 4;
+                                            
+                                            if (m_version >= 18) {
+                                                pos += 4;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
